@@ -1,9 +1,12 @@
 import classes from "./Card.module.scss";
 
 function CardTitle(props) {
-    const { title } = props;
+    const { id, title } = props;
     return (
-        <h1 className={classes.cardTitle}>
+        <h1
+            id={id ? id : title.toLowerCase().replace(" ", "-")}
+            className={classes.cardTitle}
+        >
             {title}
             <label>{title}</label>
         </h1>

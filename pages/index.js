@@ -11,7 +11,11 @@ function IndexPage() {
     return (
         <>
             <Head>
-                <title>Yas&apos;s Website</title>
+                <title>Yasiru Dharmathilaka - Portfolio</title>
+                <link
+                    rel='icon'
+                    href='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22></text></svg>'
+                />
             </Head>
 
             <NavBar>
@@ -32,16 +36,16 @@ function IndexPage() {
 
             <Card>
                 <section>
-                    <div className='image-wrapper'>
-                        <Image
-                            width='300px'
-                            height='300px'
-                            alt='Profile Picture'
-                            src={"/images/profile-picture.jpg"}
-                        />
-                    </div>
-
                     <ContactMenu id='contact-menu'>
+                        <div className='image-wrapper'>
+                            <Image
+                                width='300px'
+                                height='300px'
+                                alt='Profile Picture'
+                                src='https://github.com/ItsYasiru.png'
+                            />
+                        </div>
+
                         <a
                             title='Email'
                             href='mailto:yasiru.dharmathilaka@gmail.com'
@@ -107,7 +111,7 @@ function IndexPage() {
                         <br />
                         <br />
                         Taking apart things and breaking them, making something
-                        different, and fiddling around with circuits, this was
+                        different, &amp; fiddling around with circuits, this was
                         my thing. I got my hands on my dad's laptop and I ruined
                         it trying to do things I didn't know. I got my own
                         computer in grade 9 where I wrote my first ever
@@ -124,7 +128,7 @@ function IndexPage() {
                         when I programmed something with an actual programming
                         language. Since then I've been learning and building
                         various things like chatbots, websites, automation
-                        programs, and web scrappers.
+                        programs, &amp; web scrappers.
                     </p>
                 </section>
             </Card>
@@ -160,18 +164,18 @@ function IndexPage() {
                             <td>Expert</td>
                             <td>
                                 This is the language I've used the most. I have
-                                been coding discord bots, several computer
+                                been coding discord bots, general computer
                                 applications &amp; things to fiddle around with.
-                                I've mostly worked with discord.py, PyQt,
-                                pillow, &amp; matplotlib.
+                                I've mostly worked with discord.py, Django,
+                                PyQt, pillow, &amp; matplotlib.
                             </td>
                         </tr>
                         <tr>
                             <td>JavaScript</td>
                             <td>Expert</td>
                             <td>
-                                I've worked with JQuery, React and Next in the
-                                field of web development.
+                                I've worked with JQuery, Node.js, React and
+                                Next.js in the field of web development.
                             </td>
                         </tr>
                         <tr>
@@ -187,7 +191,20 @@ function IndexPage() {
                             <td>Databases</td>
                             <td>Intermediate</td>
                             <td>
-                                So far I've worked with Mongo DB and PostgreSQL.
+                                So far I've worked with both relational and
+                                non-relational databases that includes MongoDB,
+                                SQlite, MYSQL, &amp; PostgreSQL.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Additional</td>
+                            <td>-</td>
+                            <td>
+                                I have worked with Visual Studio Code, VIM,
+                                Github, Docker, Slack. In terms of operating
+                                systems, I have expeirence with using Windows
+                                and Ubuntu. I can work with remote machines
+                                using SSH, FTP, &amp; RDP for Windows.
                             </td>
                         </tr>
                     </table>
@@ -197,13 +214,32 @@ function IndexPage() {
             <Card>
                 <section style={{ width: "35%" }}>
                     <CardTitle title='Projects' />
-                    <p>Projects that I have contributed/handled.</p>
+                    <p>
+                        Open source projects that I have contributed to/handled,
+                        feel free to contribute or copy my code.
+                    </p>
                 </section>
                 <section>
                     <table>
                         <tr>
                             <th width='25%'>Project</th>
                             <th width='75%'>Details</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a
+                                    href='https://github.com/ItsYasiru/discroid'
+                                    target='_'
+                                >
+                                    Discroid
+                                </a>
+                            </td>
+                            <td>
+                                An asyncrounous API wrapper for discords' API
+                                and websocket connections, that is still under
+                                development as part of learning how asyncrounous
+                                code functions.
+                            </td>
                         </tr>
                         <tr>
                             <td>Ranked Bot</td>
@@ -276,23 +312,24 @@ function IndexPage() {
                             <th width='80%'>Details</th>
                         </tr>
                         <tr>
-                            <td>Developing Discord bots</td>
+                            <td>Discord bots</td>
                             <td>
-                                Discord is a goood platform for any sort of
-                                community, and discord bots can pretty much do
-                                anything on the platform. I can get anything
-                                working from a bot that can do simple day to day
-                                tasks on discord, chat moderation or pretty much
-                                any task as long as the platform supports it.
+                                Discord is a goood communication platform to any
+                                sort of community. I can get anything working
+                                from a bot that can do simple day to day tasks
+                                on discord, chat moderation or pretty much any
+                                task as long as the platform supports.
                             </td>
                         </tr>
                         <tr>
-                            <td>Developing Websites</td>
+                            <td>Websites</td>
                             <td>
-                                I ensure you that the final product will look
-                                and function just the way you want it to. I will
-                                revise and rework it till you are 100% satisfied
-                                in accordance with the design.
+                                I can work on a small scale full-stack
+                                application to fullfill your needs. I ensure you
+                                that the final product will look and function
+                                just the way you want it to. I will revise and
+                                rework it till you are 100% satisfied in
+                                accordance with the design.
                                 <hr />
                                 <h6>Static website</h6>
                                 <ul>
@@ -316,12 +353,11 @@ function IndexPage() {
                                 <h6>Dynamic website</h6>
                                 <ul>
                                     <li>
-                                        A fully customizable,
+                                        A fully customizable,{" "}
                                         <a
                                             href='https://en.wikipedia.org/wiki/Dynamic_web_page'
                                             target='_'
                                         >
-                                            {" "}
                                             dynamic{" "}
                                         </a>
                                         website.

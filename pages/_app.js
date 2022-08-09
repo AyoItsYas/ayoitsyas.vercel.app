@@ -18,9 +18,9 @@ function App({ Component, pageProps }) {
 
             <footer>
                 <p>
-                    Source available on
-                    <a href='https://github.com/ItsYasiru/ItsYasiru'> github</a>
-                    , hosted on github pages.
+                    Source available on{" "}
+                    <a href='https://github.com/ItsYasiru/ItsYasiru'>github</a>,
+                    have a great day/night!
                 </p>
             </footer>
         </>
