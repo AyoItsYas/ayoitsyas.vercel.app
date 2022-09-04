@@ -13,11 +13,12 @@
 
         left: 0;
         bottom: 0;
-        width: 100px;
+        width: 200px;
         height: 2px;
 
-        background: #e8e8e8;
+        background: #e8e8e866;
     }
+
     label {
         position: absolute;
 
@@ -36,31 +37,37 @@
     table {
         text-align: center;
         box-shadow: 0 0 20px rgb(0 0 0 / 30%);
+
+        td {
+            padding: 25px 15px;
+            border: 1px solid #111111;
+        }
         th {
             padding: 10px;
             border: 1px solid transparent;
 
             background: #111111;
         }
-        td {
-            padding: 25px 15px;
-            border: 1px solid #111111;
+        tbody {
+            tr {
+                background: #343434;
+                transition: all 0.3s;
+                &:hover,
+                &:focus {
+                    color: #000000;
+                    background: #e8e8e8;
+                }
+                td:only-child {
+                    text-align: center !important;
+                }
+                td:last-child {
+                    text-align: left;
+                }
+            }
         }
-        tr {
-            background: #343434;
-            transition: all 0.3s;
-            &:first-child:hover {
-                color: inherit;
-                background: inherit;
-            }
-            &:hover,
-            &:focus {
-                color: #000000;
-                background: #e8e8e8;
-            }
-            td:last-child {
-                text-align: left;
-            }
+        caption {
+            text-align: center;
+            font-size: 13px;
         }
     }
 
@@ -78,6 +85,9 @@
         }
         table {
             font-size: 10px;
+            td {
+                padding: 20px 10px;
+            }
         }
     }
 }
@@ -121,7 +131,14 @@
     }
 }
 
-@media screen and (max-width: 1086px) {
+@media screen and (max-width: 1845px) {
+    .main .inner section {
+        width: 100% !important;
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 1845px) {
     .main {
         height: auto;
         &:first-of-type {

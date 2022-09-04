@@ -3,8 +3,9 @@
 }
 
 body {
-    margin: 0;
-    padding: 30px 150px;
+    margin: 0 auto;
+    padding: 30px 10vw;
+    max-width: 2048px;
 
     color: #e8e8e8;
     background: #212121;
@@ -18,20 +19,25 @@ header {
     overflow: hidden;
 
     margin: 10px 20px;
-    padding: 10px;
+    padding: 20px;
     border-radius: 5px;
 
     text-align: center;
     background: #343434;
     box-shadow: 0 0 20px rgb(0 0 0 / 30%);
 
+    p {
+        margin: 0;
+    }
     h1 {
+        margin: 0;
+
         font-size: 40px;
         font-weight: 700;
     }
 }
 
-@media screen and (max-width: 875px) {
+@media screen and (max-width: 1845px) {
     body {
         padding: 10px;
     }
@@ -72,10 +78,15 @@ button {
 }
 
 .image-wrapper {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -0%);
+
     text-align: center;
     box-sizing: content-box;
-}
 
-.image-wrapper img {
-    border-radius: 5px;
+    img {
+        border-radius: 5px;
+    }
 }

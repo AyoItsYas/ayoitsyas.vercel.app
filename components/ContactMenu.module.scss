@@ -3,6 +3,8 @@
         display: flex;
         align-items: center;
 
+        width: 340px;
+        margin: auto;
         padding: 6px 25px;
         border-radius: 5px;
         background: #212121;
@@ -21,13 +23,17 @@
             font-size: 20px;
             text-align: center;
         }
-
         label {
             width: 90%;
             font-size: 18px;
             font-weight: 500;
             text-align: center;
+
+            transition: all 0.2s;
         }
+    }
+    img {
+        background-color: #e8e8e825;
     }
 }
 
@@ -35,15 +41,51 @@
     @include theme;
 
     display: flex;
-    flex-direction: column;
     flex-wrap: wrap;
+    flex-direction: column;
+    overflow: hidden;
 
     gap: 8px;
-    max-width: 400px;
-    margin: 20px auto;
-    padding: 20px;
+    max-width: 380px;
+    margin: auto;
+    padding: 28px 20px;
     border-radius: 5px;
 
     background: #343434;
     box-shadow: 0 0 20px rgb(0 0 0 / 30%);
+}
+
+.profilePicture {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -0%);
+
+    width: 320px;
+    height: 320px;
+
+    text-align: center;
+    box-sizing: content-box;
+
+    img {
+        border-radius: 5px;
+    }
+}
+
+@media screen and (max-width: 875px) {
+    .main {
+        max-width: 350px;
+
+        a {
+            width: 310px;
+        }
+        img {
+            width: 300px;
+        }
+    }
+
+    .profilePicture {
+        width: 290px;
+        height: 290px;
+    }
 }

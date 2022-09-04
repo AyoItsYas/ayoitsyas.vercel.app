@@ -1,13 +1,13 @@
-import classes from "./NavBar.module.scss";
+import styles from "./NavBar.module.scss";
 
 function NavBar(props) {
     const { children } = props;
 
     return (
-        <nav className={classes.main}>
+        <nav className={styles.main}>
             <ul>
-                {children.map((item, i) => (
-                    <li key={i}>{item}</li>
+                {children.map((child, i) => (
+                    <li key={i}>{child}</li>
                 ))}
             </ul>
         </nav>

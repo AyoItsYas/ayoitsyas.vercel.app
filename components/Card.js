@@ -1,11 +1,11 @@
-import classes from "./Card.module.scss";
+import styles from "./Card.module.scss";
 
 function CardTitle(props) {
     const { id, title } = props;
     return (
         <h1
             id={id ? id : title.toLowerCase().replace(" ", "-")}
-            className={classes.cardTitle}
+            className={styles.cardTitle}
         >
             {title}
             <label>{title}</label>
@@ -14,14 +14,15 @@ function CardTitle(props) {
 }
 
 function Card(props) {
-    const { id, title = "", children } = props;
+    const { id, title = "", style, children } = props;
     return (
         <div
             id={id ? id : title.toLowerCase().replace(" ", "-")}
             title={title}
-            className={classes.main}
+            style={style}
+            className={styles.main}
         >
-            <div className={classes.inner}>{children}</div>
+            <div className={styles.inner}>{children}</div>
         </div>
     );
 }
