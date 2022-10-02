@@ -1,161 +1,156 @@
 .cardTitle {
-    position: relative;
-    width: 100%;
-    margin: 40px 0 40px 0;
-    padding: 0;
-    padding-bottom: 5px;
+  position: relative;
+  width: 100%;
+  margin: 40px 0 40px 0;
+  padding: 0;
+  padding-bottom: 5px;
 
-    font-size: 30px;
-    font-weight: 700;
-    &:after {
-        content: "";
-        position: absolute;
+  font-size: 30px;
+  font-weight: 700;
+  &:after {
+    content: "";
+    position: absolute;
 
-        left: 0;
-        bottom: 0;
-        width: 200px;
-        height: 2px;
+    left: 0;
+    bottom: 0;
+    width: 200px;
+    height: 2px;
 
-        background: #e8e8e866;
-    }
+    background: #e8e8e866;
+  }
 
-    label {
-        position: absolute;
+  label {
+    position: absolute;
 
-        top: -30px;
-        left: -40px;
-        z-index: -1;
-        white-space: nowrap;
+    top: -30px;
+    left: -40px;
+    z-index: -1;
+    white-space: nowrap;
 
-        color: #e8e8e820;
+    color: #e8e8e820;
 
-        font-size: 90px;
-    }
+    font-size: 90px;
+  }
 }
 
 @mixin theme {
+  table {
+    text-align: center;
+    box-shadow: 0 0 20px rgb(0 0 0 / 30%);
+
+    td {
+      padding: 25px 15px;
+      border: 1px solid #111111;
+    }
+    th {
+      padding: 10px;
+      border: 1px solid transparent;
+
+      background: #111111;
+    }
+    tbody {
+      tr {
+        background: #343434;
+        transition: all 0.3s;
+        &:hover,
+        &:focus {
+          color: #000000;
+          background: #e8e8e8;
+        }
+        td:only-child {
+          text-align: center !important;
+        }
+        td:last-child {
+          text-align: left;
+        }
+      }
+    }
+    caption {
+      text-align: center;
+      font-size: 13px;
+    }
+  }
+
+  @media screen and (max-width: 1200px) {
+    h1 {
+      margin-bottom: 15px;
+      label {
+        top: -35px;
+        left: 10px;
+        font-size: 60px;
+      }
+    }
+    p {
+      font-size: 14px;
+    }
     table {
-        text-align: center;
-        box-shadow: 0 0 20px rgb(0 0 0 / 30%);
-
-        td {
-            padding: 25px 15px;
-            border: 1px solid #111111;
-        }
-        th {
-            padding: 10px;
-            border: 1px solid transparent;
-
-            background: #111111;
-        }
-        tbody {
-            tr {
-                background: #343434;
-                transition: all 0.3s;
-                &:hover,
-                &:focus {
-                    color: #000000;
-                    background: #e8e8e8;
-                }
-                td:only-child {
-                    text-align: center !important;
-                }
-                td:last-child {
-                    text-align: left;
-                }
-            }
-        }
-        caption {
-            text-align: center;
-            font-size: 13px;
-        }
+      font-size: 10px;
+      td {
+        padding: 20px 10px;
+      }
     }
-
-    @media screen and (max-width: 875px) {
-        h1 {
-            margin-bottom: 15px;
-            label {
-                top: -35px;
-                left: 10px;
-                font-size: 60px;
-            }
-        }
-        p {
-            font-size: 14px;
-        }
-        table {
-            font-size: 10px;
-            td {
-                padding: 20px 10px;
-            }
-        }
-    }
+  }
 }
 
 .main {
-    @include theme;
+  @include theme;
 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  max-width: 1490px;
+  height: 100vh;
+  margin: 0 auto;
+  padding: 0;
+  scroll-snap-align: start;
+
+  &:nth-child(odd) .inner {
+    flex-direction: row-reverse;
+  }
+
+  .inner {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
 
-    width: 100%;
-    height: 100vh;
-    margin: 0;
-    padding: 0;
-    &:first-of-type {
-        height: calc(100vh - 90px); /* Countering the body padding */
+    section {
+      padding: 20px 30px;
+      &:first-child {
+        width: 30%;
+        margin-right: auto;
+      }
+      &:last-child {
+        width: 70%;
+        margin-left: auto;
+      }
     }
-    &:nth-child(odd) .inner {
-        flex-direction: row-reverse;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .main {
+    height: auto;
+    margin: auto;
+    max-width: 80vw;
+    &:first-of-type {
+      height: auto;
     }
 
     .inner {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
+      flex-direction: column !important;
 
-        section {
-            padding: 20px 30px;
-            &:first-child {
-                width: 30%;
-                margin-right: auto;
-            }
-            &:last-child {
-                width: 70%;
-                margin-left: auto;
-            }
-        }
-    }
-}
-
-@media screen and (max-width: 1845px) {
-    .main .inner section {
+      section {
+        padding: 20px;
         width: 100% !important;
-        padding: 0;
-    }
-}
-
-@media screen and (max-width: 1845px) {
-    .main {
-        height: auto;
-        &:first-of-type {
-            height: auto;
+        &:last-child {
+          padding-top: 0;
+          width: 100% !important;
         }
-
-        .inner {
-            flex-direction: column !important;
-
-            section {
-                padding: 20px;
-                width: 100% !important;
-                &:last-child {
-                    padding-top: 0;
-                    width: 100% !important;
-                }
-            }
-        }
+      }
     }
+  }
 }

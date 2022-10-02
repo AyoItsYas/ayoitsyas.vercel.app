@@ -1,91 +1,73 @@
 @mixin theme {
-    a {
-        display: flex;
-        align-items: center;
+  a {
+    display: flex;
+    align-items: center;
 
-        width: 340px;
-        margin: auto;
-        padding: 6px 25px;
-        border-radius: 5px;
-        background: #212121;
+    height: 40px;
+    padding: 6px 25px;
+    border-radius: 5px;
+    background: #212121;
 
-        text-decoration: none;
-        transition: 0.2s;
-        transform: scale(0.95);
-        &:hover {
-            color: inherit;
-            transform: scale(1);
-        }
-
-        i {
-            width: 10%;
-
-            font-size: 20px;
-            text-align: center;
-        }
-        label {
-            width: 90%;
-            font-size: 18px;
-            font-weight: 500;
-            text-align: center;
-
-            transition: all 0.2s;
-        }
+    text-decoration: none;
+    transition: 0.2s;
+    transform: scale(0.95);
+    &:hover {
+      color: inherit;
+      transform: scale(1);
     }
-    img {
-        background-color: #e8e8e825;
+
+    i {
+      width: 10%;
+
+      font-size: 20px;
+      text-align: center;
     }
+    label {
+      width: 90%;
+      cursor: pointer;
+      font-size: 18px;
+      font-weight: 500;
+      text-align: center;
+
+      transition: all 0.2s;
+    }
+  }
+  img {
+    background-color: #e8e8e825;
+  }
 }
 
 .main {
-    @include theme;
+  @include theme;
 
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  overflow: hidden;
+  max-width: 370px;
 
-    gap: 8px;
-    max-width: 380px;
-    margin: auto;
-    padding: 28px 20px;
-    border-radius: 5px;
+  gap: 8px;
+  margin: auto;
+  padding: 28px 20px;
+  border-radius: 5px;
 
-    background: #343434;
-    box-shadow: 0 0 20px rgb(0 0 0 / 30%);
+  background: #343434;
+  box-shadow: 0 0 20px rgb(0 0 0 / 30%);
 }
 
 .profilePicture {
+  height: 300px;
+  width: 95%;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 5px;
+  .inner {
     position: relative;
+    width: 350px;
+    height: 350px;
+    margin: auto;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -0%);
-
-    width: 320px;
-    height: 320px;
-
-    text-align: center;
-    box-sizing: content-box;
-
-    img {
-        border-radius: 5px;
-    }
-}
-
-@media screen and (max-width: 875px) {
-    .main {
-        max-width: 350px;
-
-        a {
-            width: 310px;
-        }
-        img {
-            width: 300px;
-        }
-    }
-
-    .profilePicture {
-        width: 290px;
-        height: 290px;
-    }
+    transform: translate(-50%, -50%);
+  }
 }
