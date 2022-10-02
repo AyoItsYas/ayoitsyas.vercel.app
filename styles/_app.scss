@@ -22,9 +22,6 @@
 body {
   margin: 0 auto;
   padding: 30px 10vw;
-  height: 500px;
-  overflow: auto;
-  scroll-snap-type: y mandatory;
 
   color: #e8e8e8;
   background: #212121;
@@ -64,6 +61,12 @@ footer {
 @media screen and (max-width: 1200px) {
   footer {
     max-width: 80vw;
+  }
+}
+
+@media screen and (max-width: 875px) {
+  footer {
+    max-width: none;
   }
 }
 
