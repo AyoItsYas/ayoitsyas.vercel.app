@@ -4,7 +4,8 @@
   margin: 0 auto;
   padding: 0 30px;
 
-  a {
+  a,
+  label {
     color: inherit;
     text-decoration: none;
   }
@@ -41,11 +42,16 @@
     li {
       &:last-child {
         margin-left: auto;
-        a {
+        a,
+        label {
           color: #343434;
           background: #e8e8e8;
         }
         &:hover a {
+          color: #e8e8e8;
+          background: #4c4c4c;
+        }
+        &:hover label {
           color: #e8e8e8;
           background: #4c4c4c;
         }
@@ -110,7 +116,8 @@
 
 @media screen and (max-width: 450px) {
   .main {
-    a {
+    a,
+    label {
       padding-inline: 15px;
     }
     h1 {
