@@ -42,17 +42,34 @@ function LeadCapture() {
         <form id='lc-form'>
           <fieldset>
             <label htmlFor='lc-form-name'>Name</label>
-            <input required='true' id='lc-form-name' type='name' />
+            <input
+              required='true'
+              id='lc-form-name'
+              type='name'
+              placeholder='---'
+            />
           </fieldset>
 
           <fieldset>
             <label>Email</label>
-            <input required='true' d id='lc-form-email' type='email' />
+            <input
+              required='true'
+              d
+              id='lc-form-email'
+              type='email'
+              placeholder='---'
+            />
           </fieldset>
 
           <fieldset>
-            <label>Message</label>
-            <textarea required='true' d id='lc-form-message' type='text' />
+            <label style={{ bottom: "-15px" }}>Message</label>
+            <textarea
+              required='true'
+              d
+              id='lc-form-message'
+              type='text'
+              placeholder='---'
+            />
           </fieldset>
 
           <button type='submit' onClick={postLeadData}>
