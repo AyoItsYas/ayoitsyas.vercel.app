@@ -9,23 +9,33 @@ function postLeadData(event) {
 
   const data = {
     name: $("#lc-form-name").val(),
+    email: $("#lc-form-email").val(),
+    message: $("#lc-form-message").val(),
   };
 
-  const content =
-    "@everyone" +
-    encapsulateInCodeblock(`
+  const valid = Object.values(data).every((value) => Boolean(value));
+  console.log(valid);
+
+  if (valid) {
+    const content =
+      "@everyone" +
+      encapsulateInCodeblock(`
 Name   : ${data.name}
 Email  : ${data.email}
 Message: ${data.message}`);
 
-  $.ajax(url, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    data: JSON.stringify({ content: content }),
-    success: closeLeadCapture,
-  });
+    $.ajax(url, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      data: JSON.stringify({ content: content }),
+      success: closeLeadCapture,
+    });
+    return true;
+  } else {
+    return false;
+  }
 }
 
 function LeadCapture() {
@@ -72,7 +82,7 @@ function LeadCapture() {
             />
           </fieldset>
 
-          <button type='submit' onClick={postLeadData}>
+          <button type='submit' onClick={submitLeadData}>
             Submit
           </button>
         </form>
@@ -100,4 +110,10 @@ function closeLeadCapture(event) {
   $("#lc-overlay").removeClass("dragFromTop");
 }
 
-export { LeadCapture, openLeadCapture, closeLeadCapture };
+function submitLeadData(event) {
+  if (postLeadData(event)) {
+    closeLeadCapture();
+  }
+}
+
+export { LeadCapture, openLeadCapture, closeLeadCapture, submitLeadData };
