@@ -1,6 +1,7 @@
 import Script from "next/script";
 import Link from "next/link";
 import NavBar from "../components/main/NavBar";
+import { LeadCapture, openLeadCapture } from "../components/LeadCapture";
 
 import "../styles/_app.scss";
 
@@ -23,11 +24,13 @@ function App({ Component, pageProps }) {
           <Link href='#skill-set'>Skill Set</Link>
           <Link href='#projects'>Projects</Link>
           <Link href='#services'>Services</Link>
-          <Link href='#contact-menu'>Get In Touch</Link>
+          <a onClick={openLeadCapture}>Get In Touch</a>
         </NavBar>
       </header>
 
       <Component {...pageProps} />
+
+      <LeadCapture />
 
       <footer>
         <div className='footer-inner'>

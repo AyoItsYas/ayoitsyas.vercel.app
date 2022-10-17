@@ -4,8 +4,10 @@ import Head from "next/head";
 import Image from "next/image";
 import Carousel from "../components/main/Carousel";
 
+import { openLeadCapture } from "../components/LeadCapture";
+
 import { Card, CardTitle } from "../components/Card";
-import { ContactMenu, ContactAction, Profile } from "../components/ContactMenu";
+import { ContactMenu, ContactAction } from "../components/ContactMenu";
 
 import {
   SiPython,
@@ -64,6 +66,8 @@ function IndexPage() {
         <section className='mobile-vp-bind' style={{ width: "30%" }}>
           <ContactMenu
             id='contact-menu'
+            ctaText='✉️'
+            ctaOnClick={openLeadCapture}
             profilePicture={`https://github.com/${GITHUB}.png`}
           >
             <ContactAction

@@ -2,10 +2,14 @@ import Image from "next/image";
 import styles from "./ContactMenu.module.scss";
 
 function ContactMenu(props) {
-  const { id, title, style, children, profilePicture } = props;
+  const { id, title, style, children, ctaText, ctaOnClick, profilePicture } =
+    props;
 
   return (
     <div id={id} title={title} style={style} className={styles.main}>
+      <label className={styles.ctaButton} onClick={ctaOnClick}>
+        <span>{ctaText}</span>
+      </label>
       <div className={styles.profilePicture}>
         <div className={styles.inner}>
           <Image src={profilePicture} layout='fill' alt='Profile picture' />

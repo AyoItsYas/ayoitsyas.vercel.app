@@ -3,7 +3,10 @@
     display: flex;
     align-items: center;
 
+    width: 100%;
+    max-width: 330px;
     height: 40px;
+    margin: 0 auto;
     padding: 6px 25px;
     border-radius: 5px;
     background: #212121;
@@ -35,15 +38,24 @@
   img {
     background-color: #e8e8e825;
   }
+  .ctaButton {
+    transition: 0.2s;
+    font-size: 16px;
+    white-space: nowrap;
+    border-radius: 5px;
+
+    background: #3a3a3a;
+    box-shadow: 0 0 20px rgb(0 0 0 / 20%);
+  }
 }
 
 .main {
   @include theme;
 
   display: flex;
+  position: relative;
   flex-wrap: wrap;
   flex-direction: column;
-  overflow: hidden;
   max-width: 370px;
 
   gap: 8px;
@@ -53,6 +65,29 @@
 
   background: #343434;
   box-shadow: 0 0 20px rgb(0 0 0 / 30%);
+
+  .ctaButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 35px;
+    height: 35px;
+    left: 100%;
+    bottom: 0;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    transform: translate(-50%, 50%);
+    cursor: pointer;
+    &:hover {
+      transform: translate(-50%, 50%) scale(1.15);
+    }
+
+    span {
+      margin-bottom: 3px;
+    }
+  }
 }
 
 .profilePicture {
