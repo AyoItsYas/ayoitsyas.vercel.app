@@ -61,37 +61,7 @@ function IndexPage() {
       </Head>
 
       <Card id='about-me'>
-        <section style={{ width: "70%" }}>
-          <CardTitle title='About Me' />
-          <p>
-            Hello my name's Yasiru, people call me Yas. I'm from Colombo, Sri
-            Lanka. I'm 17 years old and I am currently a student at Trinity
-            College Kandy. I enjoy programming and almost anything related to
-            computers. How computers function really amazed me and here I am
-            digging deeper into the field and building my career doing what I
-            love.
-            <br />
-            <br />
-            Taking apart things and breaking them, making something different,
-            &amp; fiddling around with circuits, this was my thing. I got my
-            hands on my dad's laptop and I ruined it trying to do things I
-            didn't know. I got my own computer in grade 9 where I wrote my first
-            ever "program", it was a windows batch file game that worked on the
-            terminal. I was in boarding school so I didn't have much time to do
-            things with my computer, the only time I get to use my computer was
-            on weekends when I got home. <br />
-            <br />
-            When Covid started things changed, lockdown is what really got me
-            going. I met a lot of people online, one of them was a developer
-            that encouraged me to learn JavaScript. I wanted to build a discord
-            bot and that was when I programmed something with an actual
-            programming language. Since then I've been learning and building
-            various things like chatbots, websites, automation programs, &amp;
-            web scrappers.
-          </p>
-        </section>
-
-        <section style={{ width: "30%" }}>
+        <section className='mobile-vp-bind' style={{ width: "30%" }}>
           <ContactMenu
             id='contact-menu'
             profilePicture={`https://github.com/${GITHUB}.png`}
@@ -140,6 +110,36 @@ function IndexPage() {
               }}
             />
           </ContactMenu>
+        </section>
+
+        <section style={{ width: "70%" }}>
+          <CardTitle title='About Me' />
+          <p>
+            Hello my name's Yasiru, people call me Yas. I'm from Colombo, Sri
+            Lanka. I'm 17 years old and I am currently a student at Trinity
+            College Kandy. I enjoy programming and almost anything related to
+            computers. How computers function really amazed me and here I am
+            digging deeper into the field and building my career doing what I
+            love.
+            <br />
+            <br />
+            Taking apart things and breaking them, making something different,
+            &amp; fiddling around with circuits, this was my thing. I got my
+            hands on my dad's laptop and I ruined it trying to do things I
+            didn't know. I got my own computer in grade 9 where I wrote my first
+            ever "program", it was a windows batch file game that worked on the
+            terminal. I was in boarding school so I didn't have much time to do
+            things with my computer, the only time I get to use my computer was
+            on weekends when I got home. <br />
+            <br />
+            When Covid started things changed, lockdown is what really got me
+            going. I met a lot of people online, one of them was a developer
+            that encouraged me to learn JavaScript. I wanted to build a discord
+            bot and that was when I programmed something with an actual
+            programming language. Since then I've been learning and building
+            various things like chatbots, websites, automation programs, &amp;
+            web scrappers.
+          </p>
         </section>
       </Card>
 

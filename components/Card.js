@@ -3,10 +3,10 @@ import styles from "./Card.module.scss";
 function CardTitle(props) {
   const { title } = props;
   return (
-    <h1 className={styles.cardTitle}>
+    <h2 className={styles.cardTitle}>
       {title}
       <label>{title}</label>
-    </h1>
+    </h2>
   );
 }
 
