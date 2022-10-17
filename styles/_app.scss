@@ -110,3 +110,36 @@ button {
     margin-top: 100px;
   }
 }
+
+.dragFromTop {
+  display: flex;
+  animation-name: drag-from-top;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in;
+
+  @keyframes drag-from-top {
+    from {
+      top: -100%;
+    }
+    to {
+      top: 0;
+    }
+  }
+}
+
+.dragFromTopRev {
+  animation-name: drag-from-top-rev;
+  animation-duration: 0.5s;
+  animation-fill-mode: backwards;
+  animation-timing-function: ease-out;
+
+  @keyframes drag-from-top-rev {
+    from {
+      top: 0;
+    }
+    to {
+      top: -110%;
+    }
+  }
+}
