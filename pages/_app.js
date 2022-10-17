@@ -30,7 +30,7 @@ function App({ Component, pageProps }) {
           <Link href='#skill-set'>Skill Set</Link>
           <Link href='#projects'>Projects</Link>
           <Link href='#services'>Services</Link>
-          <a onClick={openLeadCapture}>Get In Touch</a>
+          <label onClick={openLeadCapture}>Get In Touch</label>
         </NavBar>
       </header>
 
