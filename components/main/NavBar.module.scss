@@ -4,6 +4,11 @@
   margin: 0 auto;
   padding: 0 30px;
 
+  .inner {
+    width: 100%;
+    margin-inline: auto;
+  }
+
   a,
   label {
     color: inherit;
@@ -84,21 +89,20 @@
 }
 
 @media screen and (max-width: 1200px) {
-  .main {
+  .inner {
+    display: flex;
     max-width: 80vw;
   }
 }
 
 @media screen and (max-width: 875px) {
   .main {
-    display: flex;
     position: fixed;
     background: #212121;
     top: 0;
     left: 0;
     height: 110px;
     padding: 20px 30px;
-    max-width: none;
     z-index: 800;
     h1 {
       display: block;
