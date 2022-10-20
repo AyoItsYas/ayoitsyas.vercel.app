@@ -13,7 +13,7 @@ function CardTitle(props) {
 function Card(props) {
   const { id, style, children } = props;
   return (
-    <div id={id} style={style} className={styles.main}>
+    <div id={id} style={style} className={styles.main} data-aos='fade-down'>
       <div className={styles.inner}>{children}</div>
     </div>
   );

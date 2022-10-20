@@ -101,8 +101,10 @@
   justify-content: center;
 
   width: 100%;
-  height: 100vh;
   max-width: 1490px;
+  height: 100vh;
+  min-height: 940px;
+
   margin: 0 auto;
   padding: 0;
   &:target,
@@ -118,12 +120,13 @@
 
   .inner {
     display: flex;
+    gap: 60px;
     flex-direction: row;
     align-items: center;
     justify-content: center;
 
     section {
-      padding: 20px 30px;
+      padding: 20px 0;
       &:first-child {
         width: 30%;
         margin-right: auto;
@@ -136,25 +139,40 @@
   }
 }
 
+@media screen and (min-height: 1880px) {
+  .main {
+    height: 50vh;
+  }
+}
+
 @media screen and (max-width: 1200px) {
   .main {
     height: auto;
     margin: auto;
-    max-width: 80vw;
     &:first-of-type {
       height: auto;
     }
 
     .inner {
+      gap: 0;
       flex-direction: column !important;
 
       section {
-        padding: 20px;
         width: 100% !important;
         &:last-child {
           padding-top: 0;
           width: 100% !important;
         }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 875px) {
+  .main {
+    .inner {
+      section {
+        padding: 0;
       }
     }
   }

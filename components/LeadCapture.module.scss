@@ -106,7 +106,7 @@
 .main {
   @include theme;
 
-  display: flex;
+  display: none;
   position: fixed;
   top: -110%;
   left: 0;

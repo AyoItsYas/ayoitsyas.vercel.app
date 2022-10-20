@@ -55,7 +55,7 @@ function IndexPage() {
       </Head>
 
       <Card id='about-me'>
-        <section className='mobile-vp-bind' style={{ width: "30%" }}>
+        <section className='mobile-vp-bind' style={{ width: "35%" }}>
           <ContactMenu
             id='contact-menu'
             ctaText='✉️'
@@ -108,7 +108,7 @@ function IndexPage() {
           </ContactMenu>
         </section>
 
-        <section style={{ width: "70%" }}>
+        <section style={{ width: "65%" }}>
           <CardTitle title='About Me' />
           <p>
             Hello my name's Yasiru, people call me Yas. I'm from Colombo, Sri
@@ -386,7 +386,7 @@ function IndexPage() {
                   function just the way you want it to. I will revise and rework
                   it till you are 100% satisfied in accordance with the design.
                   <hr />
-                  <h6>Static websites</h6>
+                  <h3>Static websites</h3>
                   <ul>
                     <li>
                       A good looking,{" "}
@@ -404,7 +404,7 @@ function IndexPage() {
                     </li>
                   </ul>
                   <hr />
-                  <h6>Dynamic websites</h6>
+                  <h3>Dynamic websites</h3>
                   <ul>
                     <li>
                       A fully customizable,{" "}

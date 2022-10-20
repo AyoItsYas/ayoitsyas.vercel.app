@@ -7,12 +7,14 @@ function NavBar(props) {
 
   return (
     <nav className={styles.main}>
-      <h1>Yasiru Dharmathilaka</h1>
-      <ul className={styles.desktopNavigation}>
-        {children.map((child, i) => (
-          <li key={i}>{child}</li>
-        ))}
-      </ul>
+      <div className={styles.inner}>
+        <h1>Yasiru Dharmathilaka</h1>
+        <ul className={styles.desktopNavigation}>
+          {children.map((child, i) => (
+            <li key={i}>{child}</li>
+          ))}
+        </ul>
+      </div>
     </nav>
   );
 }

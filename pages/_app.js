@@ -6,6 +6,11 @@ import { LeadCapture, openLeadCapture } from "../components/LeadCapture";
 import "../styles/_app.scss";
 
 function App({ Component, pageProps }) {
+  function initializeAOS() {
+    AOS.init({
+      delay: 100,
+    });
+  }
   return (
     <>
       <Script
@@ -22,6 +27,10 @@ function App({ Component, pageProps }) {
         integrity='sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=='
         crossOrigin='anonymous'
         referrerPolicy='no-referrer'
+      />
+      <Script
+        src='https://unpkg.com/aos@2.3.1/dist/aos.js'
+        onLoad={initializeAOS}
       />
 
       <header>

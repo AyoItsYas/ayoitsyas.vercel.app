@@ -1,8 +1,12 @@
 .main {
   width: 100%;
-  max-width: 1490px;
-  margin: 0 auto;
-  padding: 0 30px;
+  margin: 0;
+  padding: 0;
+
+  .inner {
+    width: 100%;
+    margin-inline: auto;
+  }
 
   a,
   label {
@@ -14,7 +18,6 @@
     position: relative;
 
     margin: auto 0;
-    margin-right: 10px;
     font-weight: bold;
     &:after {
       content: "";
@@ -22,6 +25,7 @@
       left: 0;
       bottom: -5px;
       width: 200px;
+      max-width: 40vw;
       height: 2px;
       background: #e8e8e866;
     }
@@ -84,26 +88,28 @@
 }
 
 @media screen and (max-width: 1200px) {
-  .main {
+  .inner {
+    display: flex;
+    gap: 20px;
     max-width: 80vw;
   }
 }
 
 @media screen and (max-width: 875px) {
   .main {
-    display: flex;
     position: fixed;
-    background: #212121;
+    background: #212121b7;
+    backdrop-filter: blur(1px);
     top: 0;
     left: 0;
     height: 110px;
     padding: 20px 30px;
-    max-width: none;
     z-index: 800;
     h1 {
       display: block;
     }
     ul {
+      width: auto;
       li {
         display: none;
         &:last-child {
@@ -118,10 +124,11 @@
   .main {
     a,
     label {
-      padding-inline: 15px;
+      font-size: 16px;
+      padding-inline: 20px;
     }
     h1 {
-      font-size: 25px;
+      font-size: 16px;
     }
   }
 }

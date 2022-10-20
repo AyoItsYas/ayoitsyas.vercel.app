@@ -30,15 +30,16 @@ body {
   font-family: "Poppins", "Helvetica Neue", "sans-serif";
 }
 
-@media screen and (max-width: 1200px) {
-  body {
-    padding: 10px;
-  }
+header {
+  margin: 0;
+  margin-inline: auto;
+  max-width: 1490px;
 }
 
 footer {
   margin: auto;
-  padding: 0 20px;
+  padding: 0;
+  max-width: 1490px;
 }
 
 .footer-inner {
@@ -58,20 +59,17 @@ footer {
   }
 }
 
-@media screen and (max-width: 1200px) {
-  footer {
-    max-width: 80vw;
-  }
-}
-
-@media screen and (max-width: 875px) {
-  footer {
-    max-width: none;
-  }
-}
-
 a {
   color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
 }
 
 button {
@@ -125,9 +123,11 @@ table {
   @keyframes drag-from-top {
     from {
       top: -100%;
+      opacity: 0;
     }
     to {
       top: 0;
+      opacity: 1;
     }
   }
 }
@@ -141,9 +141,11 @@ table {
   @keyframes drag-from-top-rev {
     from {
       top: 0;
+      opacity: 1;
     }
     to {
-      top: -110%;
+      top: -100%;
+      opacity: 0;
     }
   }
 }

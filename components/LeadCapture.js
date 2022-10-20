@@ -99,15 +99,19 @@ function LeadCapture() {
 }
 
 function openLeadCapture(event) {
+  $("#lc-overlay").css("display", "flex");
   $("#lc-overlay").removeClass("dragFromTopRev");
   $("#lc-overlay").addClass("dragFromTop");
 }
 
 function closeLeadCapture(event) {
   $("#lc-form")[0].reset();
-
   $("#lc-overlay").addClass("dragFromTopRev");
   $("#lc-overlay").removeClass("dragFromTop");
+
+  setTimeout(() => {
+    $("#lc-overlay").css("display", "none");
+  }, 400);
 }
 
 function submitLeadData(event) {
