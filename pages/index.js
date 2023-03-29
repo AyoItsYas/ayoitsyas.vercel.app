@@ -51,7 +51,7 @@ function IndexPage() {
   return (
     <>
       <Head>
-        <title>Yasiru Dharmathilaka - Portfolio</title>
+        <title>Yasiru Dharmathilaka - Portfolio - Test</title>
       </Head>
 
       <Card id='about-me'>
