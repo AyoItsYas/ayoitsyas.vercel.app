@@ -42,7 +42,7 @@ function IndexPage() {
   const FULL_NAME = "Yasiru Dharmathilaka";
   const EMAIL = "yasiru.dharmathilaka@gmail.com";
 
-  const GITHUB = "ItsYasiru";
+  const GITHUB = "AyoItsYas";
   const LINKEDIN = "yasiru-dharmathilaka";
   const DISCORD_ID = "837258955415748639";
   const DISCORD_TAG = "Yas_!_ru#9999";
